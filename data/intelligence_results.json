@@ -1,0 +1,93 @@
+{
+  "risks": [
+    {
+      "title": "Competition from Air Belgium",
+      "description": "Lufthansa faces increased competition from Air Belgium, which could potentially erode market share and profitability.",
+      "evidence": "Lufthansa bekommt Konkurrenz durch Air Belgium - DER SPIEGEL",
+      "severity": "Medium",
+      "confidence_score": "8"
+    },
+    {
+      "title": "Global Competition from Emirates and Co.",
+      "description": "Lufthansa faces severe competition from airlines like Emirates, especially on lucrative routes to Asia, South America, and Africa.",
+      "evidence": "Streit um Drehkreuze  Emirates und Co. setzen Lufthansa zu",
+      "severity": "High",
+      "confidence_score": "9"
+    },
+    {
+      "title": "Unfair Competition Allegations",
+      "description": "Lufthansa faces allegations of unfair competition from Air France-KLM, which could lead to regulatory issues and damage to reputation.",
+      "evidence": "Unfairer Wettbewerb  Lufthansa und Air France-KLM...",
+      "severity": "High",
+      "confidence_score": "8"
+    },
+    {
+      "title": "Poor Customer Service and Reputation",
+      "description": "Lufthansa has a reputation for poor customer service, which could negatively impact customer loyalty and revenue.",
+      "evidence": "Read Customer Service Reviews of www.lufthansa.com - Trustpilot",
+      "severity": "Medium",
+      "confidence_score": "7"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Digital Transformation through AI",
+      "description": "Lufthansa should prioritize AI adoption for efficiency, customer satisfaction, and revenue growth.",
+      "evidence": "Neumann on technologies Lufthansa Systems is prioritising",
+      "impact": "High",
+      "confidence_score": 9
+    },
+    {
+      "title": "Fleet Modernization and Expansion",
+      "description": "Upgrading and expanding the fleet with modern, fuel-efficient aircraft will enhance passenger experience and reduce environmental impact.",
+      "evidence": "Lufthansa - Strategic Analysis and Outlook Report 2026",
+      "impact": "High",
+      "confidence_score": 8
+    },
+    {
+      "title": "Cost Optimization and Job Reduction",
+      "description": "Implementing AI and other digital technologies can help reduce costs, streamline processes, and align the workforce with changing business needs.",
+      "evidence": "Lufthansa Turns to AI, Cuts 4,000 Jobs in Major Overhaul",
+      "impact": "High",
+      "confidence_score": 9
+    },
+    {
+      "title": "Expansion into Growing Markets",
+      "description": "Lufthansa should focus on strategic partnerships and investments in Asia, South America, and Africa to capitalize on emerging markets and demand for air travel.",
+      "evidence": "Streit um Drehkreuze",
+      "impact": "Medium",
+      "confidence_score": 7
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI Integration for Optimized Operations",
+      "description": "Lufthansa is heavily investing in AI to improve operational efficiency and agility.",
+      "evidence": "Lufthansa Leveraging AI to optimise airline operations, AI Aviation Lab - Lufthansa Group Innovation Runway",
+      "impact": "High",
+      "confidence_score": 9
+    },
+    {
+      "title": "Environmental Sustainability Focus",
+      "description": "Lufthansa Group is emphasizing sustainability through fleet modernization, SAF adoption, and investments in innovation.",
+      "evidence": "Nachhaltigkeit bei Lufthansa Group   moderne Flotte   Innovationen, Lufthansa Group achieves financial turnaround in 2022 with Adjusted EBIT of 1.5 billion euros",
+      "impact": "High",
+      "confidence_score": 8
+    },
+    {
+      "title": "Fleet Modernization and Investment",
+      "description": "Lufthansa is undergoing comprehensive fleet modernization and investing in organizational changes to improve efficiency and profitability.",
+      "evidence": "Lufthansa - Strategic Analysis and Outlook Report  2026, Lufthansa CEO Optimistic About Mainline Profitability In 2026",
+      "impact": "High",
+      "confidence_score": 9
+    },
+    {
+      "title": "Customer-Centric Service Improvements",
+      "description": "Lufthansa aims to deliver a high-quality travel experience for passengers through investments in product development and improvement.",
+      "evidence": "Lufthansa Airlines Travel Experience   Passenger Review Guide, Lufthansa - Strategic Analysis and Outlook Report  2026",
+      "impact": "Medium",
+      "confidence_score": 7
+    }
+  ],
+  "generated_at": "2026-06-17T19:52:03.516845"
+}
