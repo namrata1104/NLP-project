@@ -1,0 +1,179 @@
+{
+  "news_sentiment": {
+    "positive": 48,
+    "negative": 72,
+    "neutral": 196
+  },
+  "public_sentiment": {
+    "positive": 4,
+    "negative": 15,
+    "neutral": 9
+  },
+  "sentiment_trends": {
+    "2026-06": {
+      "positive": 46,
+      "negative": 77,
+      "neutral": 148
+    },
+    "2026-05": {
+      "positive": 2,
+      "negative": 3,
+      "neutral": 21
+    },
+    "2026-04": {
+      "positive": 0,
+      "negative": 2,
+      "neutral": 12
+    },
+    "2025-10": {
+      "positive": 2,
+      "negative": 2,
+      "neutral": 5
+    },
+    "2025-12": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 5
+    },
+    "2025-09": {
+      "positive": 4,
+      "negative": 0,
+      "neutral": 6
+    },
+    "2026-01": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 4
+    },
+    "2026-03": {
+      "positive": 2,
+      "negative": 3,
+      "neutral": 19
+    },
+    "2025-08": {
+      "positive": 3,
+      "negative": 0,
+      "neutral": 5
+    },
+    "2025-11": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 2
+    },
+    "2025-07": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 6
+    },
+    "2024-03": {
+      "positive": 3,
+      "negative": 0,
+      "neutral": 2
+    },
+    "2025-05": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2025-01": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2025-04": {
+      "positive": 3,
+      "negative": 1,
+      "neutral": 2
+    },
+    "2023-11": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 2
+    },
+    "2026-02": {
+      "positive": 0,
+      "negative": 1,
+      "neutral": 1
+    },
+    "2019-11": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2025-03": {
+      "positive": 3,
+      "negative": 1,
+      "neutral": 2
+    },
+    "2024-10": {
+      "positive": 3,
+      "negative": 1,
+      "neutral": 0
+    },
+    "2024-09": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2025-06": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2023-03": {
+      "positive": 3,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2023-07": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2024-05": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2023-06": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2023-08": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2021-03": {
+      "positive": 0,
+      "negative": 1,
+      "neutral": 3
+    },
+    "2022-10": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    },
+    "2024-07": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2021-01": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2019-08": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2017-03": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    }
+  }
+}
