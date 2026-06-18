@@ -1,93 +1,93 @@
 {
   "risks": [
     {
-      "title": "Competition from Air Belgium",
-      "description": "Lufthansa faces increased competition from Air Belgium, which could potentially erode market share and profitability.",
-      "evidence": "Lufthansa bekommt Konkurrenz durch Air Belgium - DER SPIEGEL",
-      "severity": "Medium",
-      "confidence_score": "8"
-    },
-    {
-      "title": "Global Competition from Emirates and Co.",
-      "description": "Lufthansa faces severe competition from airlines like Emirates, especially on lucrative routes to Asia, South America, and Africa.",
-      "evidence": "Streit um Drehkreuze  Emirates und Co. setzen Lufthansa zu",
+      "title": "Increased Competition and Market Saturation",
+      "description": "Lufthansa faces rising competition not only domestically but also internationally as new airlines like Air Belgium enter the market, adding pressure on Lufthansa's share in both Europe-wide routes and long-haul flights to Asia, South America, and Africa.",
+      "evidence": "Increased Competition and Market Saturation - Der Spiegel",
       "severity": "High",
-      "confidence_score": "9"
+      "confidence_score": 8
     },
     {
-      "title": "Unfair Competition Allegations",
-      "description": "Lufthansa faces allegations of unfair competition from Air France-KLM, which could lead to regulatory issues and damage to reputation.",
-      "evidence": "Unfairer Wettbewerb  Lufthansa und Air France-KLM...",
-      "severity": "High",
-      "confidence_score": "8"
-    },
-    {
-      "title": "Poor Customer Service and Reputation",
-      "description": "Lufthansa has a reputation for poor customer service, which could negatively impact customer loyalty and revenue.",
+      "title": "Customer Service Challenges",
+      "description": "Negative customer service experiences have been noted by passengers on Lufthansa, which can lead to reputational damage affecting passenger loyalty and brand image.",
       "evidence": "Read Customer Service Reviews of www.lufthansa.com - Trustpilot",
       "severity": "Medium",
-      "confidence_score": "7"
+      "confidence_score": 7
+    },
+    {
+      "title": "Dependence On Other Airlines Within Group for Expansion Strategy",
+      "description": "The CEO's strategy to expand profitably through leveraging other airlines and subsidiaries may lead to vulnerabilities if those entities face their own challenges or require additional support.",
+      "evidence": "Lufthansa CEO Says Caught in Wrong Situation, Delivery Delays - DuckDuckGo Search",
+      "severity": "Medium",
+      "confidence_score": 6
+    },
+    {
+      "title": "Impact of Structural Reforms on Workforce and Operations",
+      "description": "Comprehensive structural reforms aimed at increasing efficiency could lead to operational disruptions or workforce dissatisfaction if not managed properly, affecting service quality in the short term.",
+      "evidence": "Lufthansa - Strategic Analysis and Outlook Report 2026; Lufthansa Comprehensive structural reform aims to increase efficiency and profitability",
+      "severity": "Medium",
+      "confidence_score": 7
     }
   ],
   "opportunities": [
     {
-      "title": "Digital Transformation through AI",
-      "description": "Lufthansa should prioritize AI adoption for efficiency, customer satisfaction, and revenue growth.",
-      "evidence": "Neumann on technologies Lufthansa Systems is prioritising",
-      "impact": "High",
-      "confidence_score": 9
-    },
-    {
-      "title": "Fleet Modernization and Expansion",
-      "description": "Upgrading and expanding the fleet with modern, fuel-efficient aircraft will enhance passenger experience and reduce environmental impact.",
-      "evidence": "Lufthansa - Strategic Analysis and Outlook Report 2026",
+      "title": "Expansion into emerging markets like Asia and Africa",
+      "description": "Lufthansa Group is leveraging partnerships such as with Amadeus for strategic expansion in high-growth regions.",
+      "evidence": "\"Stritt um Drehkreuze Emirates und Co. setzen Lufthansa zu.\" & \"Lufthansa Group enters partnership with Amadeus - Lufthansa Group Newsroom.\"",
       "impact": "High",
       "confidence_score": 8
     },
     {
-      "title": "Cost Optimization and Job Reduction",
-      "description": "Implementing AI and other digital technologies can help reduce costs, streamline processes, and align the workforce with changing business needs.",
-      "evidence": "Lufthansa Turns to AI, Cuts 4,000 Jobs in Major Overhaul",
+      "title": "Digital transformation through AI and cloud technology integration",
+      "description": "Investing in artificial intelligence, data expertise expansion, and harmonizing processes across airlines to modernize operations.",
+      "evidence": "\"Neumann on technologies Lufthansa Systems is prioritising.\" & \"Lufthansa Turns to AI, Cuts 4,000 Jobs in Major Overhaul -\" (AI revolution speeding up aircraft turnarounds)\"",
       "impact": "High",
       "confidence_score": 9
     },
     {
-      "title": "Expansion into Growing Markets",
-      "description": "Lufthansa should focus on strategic partnerships and investments in Asia, South America, and Africa to capitalize on emerging markets and demand for air travel.",
-      "evidence": "Streit um Drehkreuze",
+      "title": "Fleet modernization for sustainability and efficiency",
+      "description": "Comprehensive fleet upgrades to align with the transformation strategy, enhancing performance across segments such as Network Airlines.",
+      "evidence": "\"Lufthansa - Strategic Analysis and Outlook Report 2026.\" & \"Deutsche Lufthansa AG engages in the provision of passenger, freight...\" (Fleet modernization implied)\"",
+      "impact": "High",
+      "confidence_score": 8
+    },
+    {
+      "title": "Partnerships for ecosystem optimization in travel industry",
+      "description": "Strategic alliances with IT companies like IBM and tourism platforms such as Ambassador Cruise Line to boost market presence.",
+      "evidence": "\"Lufthansa Group - IBM.\" & \"Ambassador Cruise Line claims majority of 2026-27 season already sold. Travel Agents.\"",
       "impact": "Medium",
       "confidence_score": 7
     }
   ],
   "trends": [
     {
-      "title": "AI Integration for Optimized Operations",
-      "description": "Lufthansa is heavily investing in AI to improve operational efficiency and agility.",
-      "evidence": "Lufthansa Leveraging AI to optimise airline operations, AI Aviation Lab - Lufthansa Group Innovation Runway",
+      "title": "AI Integration for Operational Optimization",
+      "description": "Lufthansa is leveraging AI across various operations such as fleet management and passenger services.",
+      "evidence": "Lufthansa Leveraging AI to optimise airline operations, AI Aviation Lab - Lufthansa Group Innovation Runway.",
       "impact": "High",
       "confidence_score": 9
     },
     {
-      "title": "Environmental Sustainability Focus",
-      "description": "Lufthansa Group is emphasizing sustainability through fleet modernization, SAF adoption, and investments in innovation.",
-      "evidence": "Nachhaltigkeit bei Lufthansa Group   moderne Flotte   Innovationen, Lufthansa Group achieves financial turnaround in 2022 with Adjusted EBIT of 1.5 billion euros",
+      "title": "Sustainability Initiatives with SAF Adoption",
+      "description": "The company is prioritizing sustainability by adopting Sustainable Aviation Fuel and modern fleet innovations.",
+      "evidence": "Nachhaltigkeit bei Lufthansa Group moderne Flotte Innovationen, Sustainable Aviation Fuel adoption details in German documents.",
       "impact": "High",
       "confidence_score": 8
     },
     {
-      "title": "Fleet Modernization and Investment",
-      "description": "Lufthansa is undergoing comprehensive fleet modernization and investing in organizational changes to improve efficiency and profitability.",
-      "evidence": "Lufthansa - Strategic Analysis and Outlook Report  2026, Lufthansa CEO Optimistic About Mainline Profitability In 2026",
+      "title": "Financial Recovery Post-Corona Pandemic",
+      "description": "Lufthansa achieved a financial turnaround with an Adjusted EBIT of €1.5 billion, indicating robust recovery measures post-pandemic.",
+      "evidence": "Lufthansa Group achieves financial turnaround in 2022 with Adjusted EBIT of 1.5 billion euros.",
       "impact": "High",
       "confidence_score": 9
     },
     {
-      "title": "Customer-Centric Service Improvements",
-      "description": "Lufthansa aims to deliver a high-quality travel experience for passengers through investments in product development and improvement.",
-      "evidence": "Lufthansa Airlines Travel Experience   Passenger Review Guide, Lufthansa - Strategic Analysis and Outlook Report  2026",
+      "title": "Enhanced Passenger Experience and Loyalty",
+      "description": "The airline focuses on improving the travel experience through punctuality, comfort in cabins, organized boarding systems which enhances customer loyalty.",
+      "evidence": "Lufthansa Airlines Travel Experience - Passengers frequently appreciate Lufthansa's punctual operations, comfortable cabin environment.",
       "impact": "Medium",
       "confidence_score": 7
     }
   ],
-  "generated_at": "2026-06-17T19:52:03.516845"
+  "generated_at": "2026-06-18T13:17:12.963028"
 }
