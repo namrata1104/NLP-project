@@ -1,0 +1,23 @@
+# Web App & UI
+streamlit
+pandas
+matplotlib
+plotly
+
+# AI & Natural Language Processing
+torch
+torchvision
+torchaudio
+sentence-transformers
+transformers
+python-dotenv
+
+# Database & Vector Storage
+chromadb
+
+# Data Collection & Scraping
+duckduckgo_search
+wikipedia-api
+feedparser
+beautifulsoup4
+requests

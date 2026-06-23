@@ -1,29 +1,29 @@
 {
   "news_sentiment": {
-    "positive": 46,
-    "negative": 61,
-    "neutral": 202
+    "positive": 53,
+    "negative": 53,
+    "neutral": 216
   },
   "public_sentiment": {
-    "positive": 5,
-    "negative": 18,
-    "neutral": 19
+    "positive": 4,
+    "negative": 24,
+    "neutral": 18
   },
   "sentiment_trends": {
     "2026-06": {
-      "positive": 46,
-      "negative": 65,
-      "neutral": 174
+      "positive": 4,
+      "negative": 45,
+      "neutral": 59
     },
     "2026-05": {
-      "positive": 1,
+      "positive": 2,
       "negative": 2,
-      "neutral": 23
+      "neutral": 20
     },
     "2026-04": {
-      "positive": 1,
+      "positive": 0,
       "negative": 2,
-      "neutral": 10
+      "neutral": 4
     },
     "2025-10": {
       "positive": 1,
@@ -36,82 +36,177 @@
       "neutral": 5
     },
     "2025-09": {
-      "positive": 4,
-      "negative": 2,
-      "neutral": 6
+      "positive": 3,
+      "negative": 0,
+      "neutral": 4
     },
     "2026-01": {
-      "positive": 0,
+      "positive": 1,
       "negative": 0,
-      "neutral": 5
+      "neutral": 3
     },
     "2026-03": {
       "positive": 1,
       "negative": 3,
-      "neutral": 17
-    },
-    "2025-08": {
-      "positive": 3,
-      "negative": 0,
-      "neutral": 5
-    },
-    "2025-07": {
-      "positive": 3,
-      "negative": 0,
-      "neutral": 6
+      "neutral": 15
     },
     "2025-11": {
       "positive": 0,
       "negative": 0,
       "neutral": 1
     },
-    "2025-05": {
+    "2025-08": {
+      "positive": 3,
+      "negative": 0,
+      "neutral": 4
+    },
+    "2025-03": {
+      "positive": 3,
+      "negative": 0,
+      "neutral": 4
+    },
+    "2024-11": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    },
+    "2023-12": {
       "positive": 0,
+      "negative": 0,
+      "neutral": 2
+    },
+    "2021-09": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2025-07": {
+      "positive": 2,
+      "negative": 0,
+      "neutral": 5
+    },
+    "2023-02": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 2
+    },
+    "2024-10": {
+      "positive": 4,
       "negative": 0,
       "neutral": 1
     },
     "2025-01": {
       "positive": 0,
       "negative": 0,
-      "neutral": 1
-    },
-    "2025-04": {
-      "positive": 2,
-      "negative": 1,
       "neutral": 2
     },
-    "2023-11": {
+    "2023-06": {
       "positive": 0,
       "negative": 0,
       "neutral": 2
     },
-    "2026-02": {
-      "positive": 0,
-      "negative": 1,
-      "neutral": 1
-    },
-    "2019-11": {
+    "2024-05": {
       "positive": 0,
       "negative": 0,
       "neutral": 1
     },
-    "2025-03": {
-      "positive": 3,
-      "negative": 0,
-      "neutral": 3
-    },
-    "2024-10": {
-      "positive": 2,
-      "negative": 0,
-      "neutral": 0
-    },
-    "2025-06": {
-      "positive": 1,
+    "2024-08": {
+      "positive": 0,
       "negative": 0,
       "neutral": 1
     },
     "2023-03": {
       "positive": 3,
+      "negative": 0,
+      "neutral": 2
+    },
+    "2019-06": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2023-04": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 3
+    },
+    "2021-03": {
+      "positive": 0,
+      "negative": 1,
+      "neutral": 4
+    },
+    "2024-09": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2024-07": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 3
+    },
+    "2025-05": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2020-05": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2025-04": {
+      "positive": 3,
+      "negative": 1,
+      "neutral": 3
+    },
+    "2020-11": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    },
+    "2024-06": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2017-03": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2015-06": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2019-04": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2016-08": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2018-06": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2015-04": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2026-02": {
+      "positive": 0,
+      "negative": 1,
+      "neutral": 0
+    },
+    "2025-06": {
+      "positive": 1,
       "negative": 0,
       "neutral": 1
     },
@@ -120,42 +215,47 @@
       "negative": 0,
       "neutral": 1
     },
+    "2022-10": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 1
+    },
     "2024-03": {
       "positive": 1,
       "negative": 0,
       "neutral": 0
+    },
+    "2023-08": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 2
+    },
+    "2023-11": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
     },
     "2022-05": {
       "positive": 0,
       "negative": 1,
       "neutral": 0
     },
-    "2022-10": {
-      "positive": 1,
-      "negative": 0,
-      "neutral": 0
-    },
-    "2024-07": {
+    "2019-05": {
       "positive": 0,
       "negative": 0,
-      "neutral": 2
-    },
-    "2021-03": {
-      "positive": 0,
-      "negative": 1,
-      "neutral": 2
+      "neutral": 1
     },
     "2021-01": {
       "positive": 0,
       "negative": 0,
       "neutral": 1
     },
-    "2017-11": {
-      "positive": 1,
-      "negative": 0,
+    "2020-08": {
+      "positive": 0,
+      "negative": 1,
       "neutral": 0
     },
-    "2017-03": {
+    "2017-11": {
       "positive": 1,
       "negative": 0,
       "neutral": 0
@@ -166,11 +266,6 @@
       "neutral": 1
     },
     "2014-03": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2023-08": {
       "positive": 0,
       "negative": 0,
       "neutral": 1

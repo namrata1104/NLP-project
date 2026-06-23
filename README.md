@@ -23,11 +23,11 @@ The goal of this project is not information retrieval or summarization. The goal
 
 Organizations today are surrounded by a continuous flow of information — news, financial reports, competitor activity, customer feedback, and industry trends. The challenge is no longer *finding* information; it is *transforming* it into strategic decisions.
 
-This project builds an AI Strategic Intelligence Agent for **Lufthansa Group** that:
+This project builds an AI Strategic Intelligence Agent for Lufthansa Group that:
 
 1. **Collects** live, real information about Lufthansa from multiple independent public sources, in both English and German
-2. **Stores** that information in a searchable knowledge repository
-3. **Cleans and filters** the data to keep only relevant, deduplicated content
+2. **Cleans and filters** the data to keep only relevant, deduplicated content
+3. **Stores** that information in a searchable knowledge repository
 4. **Identifies** opportunities, risks, and trends using Retrieval-Augmented Generation (RAG)
 5. **Reasons** like a CEO advisor — prioritizing actions, justifying decisions, and explicitly addressing trade-offs
 6. **Produces** evidence-based recommendations with expected impact and risk assessment
@@ -208,4 +208,3 @@ lufthansa_intelligence/
 4. Add a HuggingFace token to a `.env` file: `HF_TOKEN=your_token_here`
 5. Run the notebooks in order (01 → 06) to collect data, build the knowledge repository, and generate intelligence outputs
 6. Launch the dashboard: `streamlit run app.py`
-

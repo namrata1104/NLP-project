@@ -53,69 +53,51 @@ Provide a clear, evidence-based answer with a specific recommendation."""
 st.markdown("""
 <style>
     .stApp {
-        background-color: #FFFFFF;
+        background-color: #0A1A4F !important;
     }
 
-    /* Top navy bar effect on the title area */
-    .main .block-container {
-        padding-top: 1rem;
-    }
-
-    h1, h2, h3, h4 {
-        color: #0A1A4F !important;
-    }
-
-    p, .stMarkdown, .stCaption, label {
-        color: #1A1A1A;
+    h1, h2, h3, h4, p, span, label, .stMarkdown, .stCaption {
+        color: #FFFFFF !important;
     }
 
     .stButton button {
-    background-color: #0A1A4F;
-    color: #FFFFFF !important;
-    border: none;
-    border-radius: 4px;
-    font-weight: 600;
+        background-color: #F8CB1D; /* The specific yellow color from your picture */
+        color: #0A1A4F !important;
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
     }
 
     .stButton button:hover {
-    background-color: #FFC600;
-    color: #0A1A4F !important;
-    }
-
-    .stButton button p {
-    color: #FFFFFF !important;
-    }
-
-    .stButton button:hover p {
-    color: #0A1A4F !important;
+        background-color: #FFC600;
+        color: #0A1A4F !important;
     }
 
     .stTextInput input {
-    border: 1px solid #0A1A4F;
-    color: #0A1A4F !important;
-    background-color: #FFFFFF !important;
+        border: 1px solid #FFFFFF;
+        color: #0A1A4F !important;
+        background-color: #FFFFFF !important;
     }
 
-    [data-testid="stExpander"] summary {
-    background-color: #0A1A4F !important;
-    border-radius: 4px;
+    [data-testid="stMetricValue"] {
+        color: #FFFFFF !important;
+    }
+
+    [data-testid="stMetricLabel"] {
+        color: #FFFFFF !important;
+    }
+
+    .stExpander {
+        border: 1px solid #FFFFFF;
+        background-color: #142a66;
     }
 
     [data-testid="stExpander"] summary p {
         color: #FFFFFF !important;
     }
 
-    [data-testid="stExpander"] summary span {
-        color: #FFFFFF !important;
-    }
-
-    .stExpander {
-        border: 1px solid #E0E0E0;
-        background-color: #F8F9FB;
-    }
-
     hr {
-        border-color: #0A1A4F;
+        border-color: #FFFFFF;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -130,7 +112,7 @@ st.set_page_config(
 st.title("✈️ Lufthansa Group — Executive Intelligence Dashboard")
 st.markdown("AI-powered strategic intelligence for executive decision-making")
 
-st.image("assets/lufthansaannounces1_1776846116 (1).jpg", use_container_width=True)
+st.image("assets/lufthansaannounces1_1776846116 (1).jpg", width="stretch")
 
 st.divider()
 # ── Load all data ─────────────────────────────────────────────
@@ -232,7 +214,7 @@ st.divider()
 
 # ── Section 5: Sentiment Analysis ────────────────────────────
 # ── Section 5: Sentiment Analysis ────────────────────────────
-st.header("💬 Section 5: Sentiment Analysis")
+st.header("Sentiment Analysis")
 
 col1, col2 = st.columns(2)
 
@@ -294,7 +276,7 @@ fig_pie = px.pie(
 )
 fig_pie.update_traces(textposition='inside', textinfo='percent+label')
 fig_pie.update_layout(showlegend=False, margin=dict(l=20, r=20, t=20, b=20))
-st.plotly_chart(fig_pie, use_container_width=True)
+st.plotly_chart(fig_pie, width="stretch")
 
 st.divider()
 
@@ -326,7 +308,7 @@ st.markdown("Ask the Strategic Intelligence Agent a question — it will retriev
 
 user_question = st.text_input("Ask a question (e.g. 'What are Lufthansa's biggest risks right now?')")
 
-if st.button("Ask the Agent"):
+if st.button("Ask Me"):
     if user_question:
         with st.spinner("Retrieving relevant documents and generating analysis..."):
             answer, evidence = live_search_and_recommend(user_question)

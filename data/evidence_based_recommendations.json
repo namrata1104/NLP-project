@@ -1,10 +1,27 @@
 {
   "recommendations": [
     {
-      "recommendation": "Expand long-haul network with new Johannesburg & São Paulo services to tap into emerging markets and enhance revenue growth.",
+      "recommendation": "Leverage AI-driven Digital Transformation to improve operational efficiency and service quality.",
       "supporting_evidence": [
-        "Expanding Long Haul Network and Reducing Domestic Feeder Flights: Lufthansa expands long haul network while reducing domestic feeder...",
-        "Growth in International Routes with New Johannesburg & São Paulo Services: Lufthansa expands long haul network while reducing domestic feeder..."
+        "Lufthansa Systems IT-Innovationen für die Luftfahrt",
+        "Lufthansa Group IBM"
+      ],
+      "expected_impact": {
+        "revenue_growth": "High",
+        "market_differentiation": "Medium",
+        "customer_acquisition": "High"
+      },
+      "risk_assessment": {
+        "financial_risk": "Low",
+        "operational_risk": "Medium",
+        "strategic_risk": "Low"
+      }
+    },
+    {
+      "recommendation": "Expand strategic partnership with Indian Airlines to enhance market presence and revenue streams.",
+      "supporting_evidence": [
+        "Google News - Lufthansa - Latest",
+        "Lufthansa Group, Air India expand strategic partnership"
       ],
       "expected_impact": {
         "revenue_growth": "High",
@@ -18,39 +35,21 @@
       }
     },
     {
-      "recommendation": "Accelerate fleet modernization efforts by integrating sustainable aviation fuel across new aircraft deliveries to align with increasing sustainability demands and regulatory pressures.",
+      "recommendation": "Enhance sustainability initiatives to attract environmentally conscious travelers and manage future regulatory risks.",
       "supporting_evidence": [
-        "Fleet Modernization with Sustainable Aviation Fuel Adoption: Fleet modernization including short-haul A220 and A320neo family, long haul A350, Boeing 787-9 aircraft; Sustainability by Lufthansa Group",
-        "Regulatory Challenges in EU Air Transport: Competition. High Costs, Competitions Verzerrungen und Bürokratie belasten den EU-Luftverkehr."
+        "Home - Lufthansa Group Sustainability Fact Sheet 2025 Data and facts on corporate responsibility within the Lufthansa Group"
       ],
       "expected_impact": {
-        "revenue_growth": "Medium",
+        "revenue_growth": "Low",
         "market_differentiation": "High",
-        "customer_acquisition": "High"
+        "customer_acquisition": "Medium"
       },
       "risk_assessment": {
         "financial_risk": "Low",
         "operational_risk": "Medium",
         "strategic_risk": "Low"
       }
-    },
-    {
-      "recommendation": "Integrate sustainable corporate responsibility initiatives across operations to improve brand perception and loyalty amidst growing eco-conscious consumer demand.",
-      "supporting_evidence": [
-        "Strengthen Corporate Responsibility within Global Aviation Group: Company Management Lufthansa Group - The Lufthansa Group is a global aviation group with around...",
-        "Supporting evidence 1 of the CEO's strategy for sustainability, such as integrating sustainable corporate responsibility initiatives across operations."
-      ],
-      "expected_impact": {
-        "revenue_growth": "Medium",
-        "market_differentiation": "High",
-        "customer_acquisition": "High"
-      },
-      "risk_assessment": {
-        "financial_risk": "Low",
-        "operational_risk": "Low",
-        "strategic_risk": "Low"
-      }
     }
   ],
-  "generated_at": "2026-06-20T22:52:54.183123"
+  "generated_at": "2026-06-22T23:21:23.262479"
 }
