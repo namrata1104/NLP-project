@@ -99,6 +99,7 @@ flowchart TB
 ```
 
 **Local reasoning engine:** All LLM-based reasoning (Strategic Intelligence Engine, CEO Agent, Evidence-Based Recommendations, Live Query, AI Agent Layer) runs locally via Ollama using **Llama 3.1 8B**, chosen for its official multilingual support (including German) and more consistent JSON-formatted output under repeated testing. This is fully open-source and satisfies the project requirement that the reasoning engine must not be a paid commercial LLM API.
+
 ---
 
 ## Data Flow Diagram
