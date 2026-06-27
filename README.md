@@ -40,6 +40,8 @@ This project builds an AI Strategic Intelligence Agent for Lufthansa Group that:
 
 ## System Architecture Diagram
 
+## System Architecture Diagram
+
 ```mermaid
 flowchart TB
     subgraph Collection["Data Collection Layer"]
@@ -61,11 +63,24 @@ flowchart TB
     end
 
     subgraph Intelligence["Intelligence Layer (standalone notebooks)"]
+        direction TB
         D1[Semantic Search /<br/>Retrieval]
         D2[Strategic Intelligence Engine<br/>Opportunities · Risks · Trends]
         D3[AI CEO Agent<br/>Reasoning + Prioritization]
         D4[Evidence-Based<br/>Recommendations]
         D5[Sentiment Analysis]
+        D1 --> D2 --> D3 --> D4
+    end
+
+    subgraph AgentLayer["AI Agent Layer (agent_orchestrator.ipynb)"]
+        direction TB
+        F4[MarketAnalysisAgent<br/>Plan → Retrieve → Analyze]
+        F5[RecommendationAgent<br/>Plan → Decide → Recommend → Validate]
+        Tools[Tools:<br/>tool_search · tool_llm · tool_validate]
+        F4 -->|hands off market analysis| F5
+        F4 -.uses.-> Tools
+        F5 -.uses.-> Tools
+        F5 -->|retry on<br/>validation failure| F5
     end
 
     subgraph Presentation["Presentation Layer"]
@@ -75,55 +90,74 @@ flowchart TB
 
     A1 & A2 & A3 & A4 --> B1 --> B2 --> B3 --> B4 --> C1
     C1 --> D1
-    D1 --> D2 --> D3 --> D4
     C1 --> D5
+    C1 --> F4
     D2 & D3 & D4 & D5 --> E1
+    F5 -->|validated output| E1
     C1 --> E2
     D3 -.local LLM.-> E2
 ```
 
-**AI Agent Layer** (added per clarified assignment requirements — reads from the same ChromaDB shown above, and writes the same output files the dashboard reads):
-
-```mermaid
-flowchart LR
-    Chroma[(ChromaDB)] --> MAA[MarketAnalysisAgent<br/>Plan → Retrieve → Analyze]
-    MAA -->|hands off market analysis| RA[RecommendationAgent<br/>Plan → Decide → Recommend → Validate]
-    MAA -.uses.-> Tools[Tools:<br/>tool_search · tool_llm · tool_validate]
-    RA -.uses.-> Tools
-    RA -->|validation fails, retries left| RA
-    RA -->|validated output| Dashboard[Streamlit Executive Dashboard]
-```
-
 **Local reasoning engine:** All LLM-based reasoning (Strategic Intelligence Engine, CEO Agent, Evidence-Based Recommendations, Live Query, AI Agent Layer) runs locally via Ollama using **Llama 3.1 8B**, chosen for its official multilingual support (including German) and more consistent JSON-formatted output under repeated testing. This is fully open-source and satisfies the project requirement that the reasoning engine must not be a paid commercial LLM API.
-
 ---
 
 ## Data Flow Diagram
 
 ```mermaid
-flowchart LR
-    Web([Public Web<br/>DuckDuckGo, Wikipedia,<br/>Google News, Reddit]) -->|live search queries| Raw[Raw Documents<br/>JSON]
-    Raw -->|clean + dedupe + filter| Clean[Clean Documents]
-    Clean -->|multilingual embedding model| Vectors[384-dim Vectors]
-    Vectors -->|store with metadata| Chroma[(ChromaDB)]
+flowchart TB
+    Web([Public Web<br/>DuckDuckGo, Wikipedia,<br/>Google News, Reddit])
 
-    Chroma -->|semantic search| Retrieved[Retrieved Documents]
-    Retrieved -->|LLM reasoning| Insights[Risks / Opportunities /<br/>Trends]
-    Insights -->|LLM reasoning| CEO[CEO Recommendation<br/>+ Trade-offs]
-    CEO -->|LLM reformatting| Evidence[Evidence-Based<br/>Recommendations]
+    subgraph Ingestion["Collection & Storage"]
+        direction TB
+        Raw[Raw Documents<br/>JSON]
+        Clean[Clean Documents]
+        Vectors[384-dim Vectors]
+        Chroma[(ChromaDB)]
+        Raw --> Clean --> Vectors --> Chroma
+    end
 
-    Chroma -->|sentiment model| Sentiment[News / Public Sentiment<br/>+ Trends]
+    Web -->|live search queries| Raw
 
-    Chroma -->|tool_search| AgentRetrieved[Retrieved Documents<br/>per category]
-    AgentRetrieved -->|tool_llm| AgentAnalysis[Structured Risks /<br/>Opportunities / Trends]
-    AgentAnalysis -->|tool_llm| AgentBriefing[CEO Briefing]
-    AgentBriefing -->|tool_llm| AgentRecs[3 Recommendations]
-    AgentRecs -->|tool_validate| AgentCheck{Validation<br/>Passed?}
-    AgentCheck -->|No, retries left| AgentRecs
-    AgentCheck -->|Yes| AgentLog[agent_log.json<br/>+ validated output]
+    subgraph Standalone["Standalone Notebook Path"]
+        direction TB
+        Retrieved[Retrieved Documents]
+        Insights[Risks / Opportunities /<br/>Trends]
+        CEO[CEO Recommendation<br/>+ Trade-offs]
+        Evidence[Evidence-Based<br/>Recommendations]
+        Retrieved -->|LLM reasoning| Insights
+        Insights -->|LLM reasoning| CEO
+        CEO -->|LLM reformatting| Evidence
+    end
 
-    Insights & CEO & Evidence & Sentiment & AgentLog --> Dashboard[Streamlit Dashboard]
+    subgraph AgentPath["AI Agent Layer Path"]
+        direction TB
+        AgentRetrieved[Retrieved Documents<br/>per category]
+        AgentAnalysis[Structured Risks /<br/>Opportunities / Trends]
+        AgentBriefing[CEO Briefing]
+        AgentRecs[3 Recommendations]
+        AgentCheck{Validation<br/>Passed?}
+        AgentLog[agent_log.json<br/>+ validated output]
+        AgentRetrieved -->|tool_llm| AgentAnalysis
+        AgentAnalysis -->|tool_llm| AgentBriefing
+        AgentBriefing -->|tool_llm| AgentRecs
+        AgentRecs -->|tool_validate| AgentCheck
+        AgentCheck -->|No, retries left| AgentRecs
+        AgentCheck -->|Yes| AgentLog
+    end
+
+    subgraph SentimentPath["Sentiment Path"]
+        Sentiment[News / Public Sentiment<br/>+ Trends]
+    end
+
+    Chroma -->|semantic search| Retrieved
+    Chroma -->|tool_search| AgentRetrieved
+    Chroma -->|sentiment model| Sentiment
     Chroma -->|live query| LiveQ[Live Strategic Query]
+
+    Dashboard[Streamlit Dashboard]
+    Evidence --> Dashboard
+    AgentLog --> Dashboard
+    Sentiment --> Dashboard
     LiveQ --> Dashboard
 ```
 
