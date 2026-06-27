@@ -33,7 +33,8 @@ This project builds an AI Strategic Intelligence Agent for Lufthansa Group that:
 5. **Reasons** like a CEO advisor — prioritizing actions, justifying decisions, and explicitly addressing trade-offs
 6. **Produces** evidence-based recommendations with expected impact and risk assessment
 7. **Analyzes sentiment** across news and public/community sources
-8. **Presents** everything through an interactive Streamlit dashboard, including a live query feature
+8. **Demonstrates explicit AI agent behaviour** — planning, tool use, retrieval, analysis, autonomous decision-making, and validation — through a dedicated agent layer built on top of the pipeline above
+9. **Presents** everything through an interactive Streamlit dashboard, including a live query feature
 
 ---
 
@@ -59,22 +60,12 @@ flowchart TB
         C1[(ChromaDB<br/>Vector Store)]
     end
 
-    subgraph Intelligence["Intelligence Layer"]
+    subgraph Intelligence["Intelligence Layer (standalone notebooks)"]
         D1[Semantic Search /<br/>Retrieval]
         D2[Strategic Intelligence Engine<br/>Opportunities · Risks · Trends]
         D3[AI CEO Agent<br/>Reasoning + Prioritization]
         D4[Evidence-Based<br/>Recommendations]
         D5[Sentiment Analysis]
-    end
-
-    subgraph AgentLayer["AI Agent Layer (agent_orchestrator.ipynb)"]
-        F0[Tools:<br/>tool_search · tool_llm · tool_validate]
-        F4[MarketAnalysisAgent<br/>Plan → Retrieve → Analyze]
-        F5[RecommendationAgent<br/>Plan → Decide → Recommend → Validate]
-        F4 -->|hands off market analysis| F5
-        F4 -.uses.-> F0
-        F5 -.uses.-> F0
-        F5 -.retry on<br/>validation failure.-> F5
     end
 
     subgraph Presentation["Presentation Layer"]
@@ -86,11 +77,21 @@ flowchart TB
     C1 --> D1
     D1 --> D2 --> D3 --> D4
     C1 --> D5
-    C1 --> F4
     D2 & D3 & D4 & D5 --> E1
     C1 --> E2
     D3 -.local LLM.-> E2
-    F5 -->|validated output| E1
+```
+
+**AI Agent Layer** (added per clarified assignment requirements — reads from the same ChromaDB shown above, and writes the same output files the dashboard reads):
+
+```mermaid
+flowchart LR
+    Chroma[(ChromaDB)] --> MAA[MarketAnalysisAgent<br/>Plan → Retrieve → Analyze]
+    MAA -->|hands off market analysis| RA[RecommendationAgent<br/>Plan → Decide → Recommend → Validate]
+    MAA -.uses.-> Tools[Tools:<br/>tool_search · tool_llm · tool_validate]
+    RA -.uses.-> Tools
+    RA -->|validation fails, retries left| RA
+    RA -->|validated output| Dashboard[Streamlit Executive Dashboard]
 ```
 
 **Local reasoning engine:** All LLM-based reasoning (Strategic Intelligence Engine, CEO Agent, Evidence-Based Recommendations, Live Query, AI Agent Layer) runs locally via Ollama using **Llama 3.1 8B**, chosen for its official multilingual support (including German) and more consistent JSON-formatted output under repeated testing. This is fully open-source and satisfies the project requirement that the reasoning engine must not be a paid commercial LLM API.
@@ -139,8 +140,9 @@ flowchart LR
 | Storage | Knowledge repository | ChromaDB | Stores text, embeddings, and metadata together; built-in persistence and similarity search |
 | Storage | Embedding model | `paraphrase-multilingual-MiniLM-L12-v2` | Multilingual (English + German), lightweight, 384-dimension vectors |
 | Storage | Similarity metric | Cosine similarity | Measures meaning (vector direction), unaffected by document length |
-| Intelligence | Reasoning LLM | Llama 3.1 8B via Ollama (local) | Open-source, official multilingual (EN/DE) support, satisfies "no paid commercial API" requirement |
+| Intelligence | Reasoning LLM | Llama 3.1 8B via Ollama (local) | Open-source, official multilingual (EN/DE) support, satisfies "no paid commercial API" requirement, more consistent structured JSON output than smaller models tested |
 | Intelligence | Sentiment model | `cardiffnlp/twitter-xlm-roberta-base-sentiment` | Multilingual, 3-class (positive/negative/neutral), empirically tested as most accurate on business/news text |
+| Agent Layer | Orchestration | Plain Python (classes + functions) | Explicit, dependency-free control flow that keeps every agent decision inspectable and explainable |
 | Presentation | Dashboard | Streamlit | Fast to build, interactive widgets, suitable for live demo |
 | Presentation | Visualization | Matplotlib + Plotly | Static charts for simple comparisons, interactive charts for trend exploration |
 
@@ -154,7 +156,7 @@ The system follows a **Retrieval-Augmented Generation (RAG)** pattern for all re
 Retrieval  →  Semantic search in ChromaDB finds the most relevant documents
               for a given question, using cosine similarity over multilingual embeddings
 
-Generation →  The retrieved documents are passed to the local LLM (Phi-4 Mini),
+Generation →  The retrieved documents are passed to the local LLM (Llama 3.1 8B),
               which reasons over them and generates new, evidence-grounded text —
               risks, opportunities, trends, recommendations, or a live answer
 ```
@@ -174,14 +176,11 @@ This pattern is applied four times across the project:
 
 ### Why this exists
 
-The pipeline described above demonstrates RAG (retrieval-augmented generation),
-but on its own follows the pattern:
+The pipeline described above demonstrates RAG (retrieval-augmented generation), but on its own follows the pattern:
 
 > User → Prompt → LLM + RAG (via Ollama) → Response
 
-This does not demonstrate explicit AI agent behaviour. Following clarified
-assignment requirements, the system was extended — without discarding the
-existing pipeline above — to add:
+This demonstrates successful use of a Large Language Model, but does not demonstrate explicit AI agent behaviour. Following clarified assignment requirements, the system was extended — without discarding the existing pipeline above — to add:
 
 - Planning before execution
 - Tool usage beyond the LLM itself
@@ -192,18 +191,17 @@ existing pipeline above — to add:
 
 ### Architecture
 
-`notebooks/agent_orchestrator.ipynb` implements two specialized agents,
-coordinated by an orchestrator function:
+`notebooks/agent_orchestrator.ipynb` implements two specialized agents, coordinated by an orchestrator function:
 
-**`MarketAnalysisAgent`** plans its retrieval strategy, calls `tool_search`
-(semantic search over ChromaDB) separately for risks, opportunities, and
-trends, then calls `tool_llm` to extract structured findings from the
-retrieved evidence.
+```
+Goal
+  → MarketAnalysisAgent   (Plan → Retrieve → Analyze)
+  → RecommendationAgent   (Plan → Decide → Recommend → Validate)
+```
 
-**`RecommendationAgent`** plans its prioritization approach, calls `tool_llm`
-to synthesize a CEO executive briefing, calls `tool_llm` again to generate
-exactly 3 structured recommendations, then calls `tool_validate` — a
-rule-based, non-LLM check — to verify the output before presenting it.
+**`MarketAnalysisAgent`** plans its retrieval strategy, calls `tool_search` (semantic search over ChromaDB) separately for risks, opportunities, and trends, then calls `tool_llm` to extract structured findings from the retrieved evidence.
+
+**`RecommendationAgent`** plans its prioritization approach, calls `tool_llm` to synthesize a CEO executive briefing, calls `tool_llm` again to generate exactly 3 structured recommendations, then calls `tool_validate` — a rule-based, non-LLM check — to verify the output before presenting it.
 
 ### Tools
 
@@ -220,15 +218,10 @@ Three explicit tools, satisfying "tool usage beyond the LLM itself":
 After validation, `RecommendationAgent` decides:
 
 - Validation passes → present recommendations as final
-- Validation fails, retries remain → retry with the specific validation
-  failures fed back as corrective feedback (up to 2 retries)
-- Retries exhausted → flag the output for review rather than presenting it
-  as correct
+- Validation fails, retries remain → retry with the specific validation failures fed back as corrective feedback (up to 2 retries)
+- Retries exhausted → flag the output for review rather than presenting it as correct
 
-This was demonstrated live: an initial run scored 0/3 on validation; after
-one retry with corrective feedback, the same run reached 3/3. Each agent run
-is logged to `data/agent_log.json` (goal, both agents' plans, validation
-report, retry count, final status) as an auditable record of this behaviour.
+This was demonstrated live during testing: an initial run scored 0/3 on validation; after one retry with the specific failures fed back as corrective feedback, the same run reached 3/3. Each agent run is logged to `data/agent_log.json` (goal, both agents' plans, validation report, retry count, final status) as an auditable record of this behaviour.
 
 ---
 
@@ -247,7 +240,7 @@ The brief recommends `BAAI bge-base-en-v1.5`, `BAAI bge-small-en-v1.5`, and `all
 Collected documents vary enormously in length — from short titles to full Wikipedia extracts. Euclidean distance is sensitive to vector magnitude, which is influenced by document length, and would incorrectly treat longer documents as "further away" even when they share the same meaning. Cosine similarity measures only the angle between vectors, ignoring length, making it the correct choice for a corpus with highly variable document lengths.
 
 **Why a local LLM (Ollama) instead of a cloud API**
-The brief explicitly disallows OpenAI, Anthropic, Gemini, and any paid commercial LLM API as the reasoning engine. Llama 3.1 8B, run locally via Ollama, is fully open-source and satisfies this requirement without ambiguity. It was chosen over the initially-used Phi-4 Mini after testing showed more reliable structured JSON output and official documented support for German, matching the project's bilingual corpus.
+The brief explicitly disallows OpenAI, Anthropic, Gemini, and any paid commercial LLM API as the reasoning engine. Llama 3.1 8B, run locally via Ollama, is fully open-source and satisfies this requirement without ambiguity. It was chosen over an initially-used smaller model (Phi-4 Mini) after testing showed more reliable structured JSON output and official documented support for German, matching the project's bilingual corpus.
 
 **Why filtering for relevance happens after collection, not instead of broad collection**
 RSS feeds from general aviation sources return many articles unrelated to Lufthansa specifically (e.g., about other airlines). Rather than relying on narrow collection alone, documents are collected broadly and then explicitly filtered by checking for mentions of Lufthansa or its subsidiaries — ensuring the final knowledge base is genuinely focused on the company being analyzed.
@@ -299,5 +292,5 @@ lufthansa_intelligence/
 2. Install dependencies: `pip install -r requirements.txt`
 3. Install and start [Ollama](https://ollama.com), then pull the model: `ollama pull llama3.1:8b`
 4. Add a HuggingFace token to a `.env` file: `HF_TOKEN=your_token_here`
-5. Run the notebooks in order (01 → 06) to collect data, build the knowledge repository, and generate intelligence outputs
+5. Run the notebooks in order — `data_collection` → `processing` → `intelligence_engine` → `sentiment_analysis` → `ceo_agent` → `recommendations` — to collect data, build the knowledge repository, and generate intelligence outputs, **or** run `agent_orchestrator.ipynb` alone to regenerate the same outputs through the explicit AI agent layer
 6. Launch the dashboard: `streamlit run app.py`
