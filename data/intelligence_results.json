@@ -1,93 +1,92 @@
 {
   "risks": [
     {
-      "title": "Increased Competition in Asia and Africa Markets",
-      "description": "Lufthansa faces stiff competition on lucrative long-haul routes such as those connecting Europe with growth markets like China, India, Brazil, Russia, South America, Central Asian countries, the Middle East, Eastern European Countries (EEC), Latin American regions & Caribbean island nations.",
+      "title": "Geopolitical Risks",
+      "description": "Lufthansa's stock tumbled despite record earnings due to geopolitical and labor risks.",
+      "evidence": "AskTraders: Lufthansa Stock Tumbles Despite Record Earnings as Geopolitical and Labor Risks Cloud Outlook - AskTraders",
       "severity": "High",
-      "confidence_score": 8,
-      "evidence": "Streit um Drehkreuze  Emirates and Co. setzen Lufthansa zu - Aviation.Direct"
+      "confidence_score": 8
     },
     {
-      "title": "Financial Performance Decline with High Revenue but Lower Profit Margin",
-      "description": "Despite achieving the highest revenue in company history, Lufthansa's financial performance shows a significant drop as reflected by almost 40 percent decrease in profit margins.",
+      "title": "Labor Disputes",
+      "description": "Lufthansa is facing the threat of a marathon strike by pilots' union Vereinigung Cockpit.",
+      "evidence": "Flightright: Lufthansa strike compensation  Up to €600  - Flightright",
       "severity": "High",
-      "confidence_score": 9,
-      "evidence": "Lufthansa mit starkem Gewinneinbruch - ZDFheute"
+      "confidence_score": 9
     },
     {
-      "title": "Customer Service and Passenger Experience Issues",
-      "description": "Negative feedback from customers indicates a potential decline in the quality of service offered by Lufthansa, which could harm its reputation.",
+      "title": "Competition from Low-Cost Carriers",
+      "description": "Lufthansa is facing harsh competition from low-cost carriers like Emirates, which are setting their sights on Lufthansa's lucrative long-haul routes.",
+      "evidence": "Streit um Drehkreuze  Emirates und Co. setzen Lufthansa zu: Streit um Drehkreuze",
       "severity": "Medium",
-      "confidence_score": 7,
-      "evidence": "Read Customer Service Reviews of www.lufthansa.com - Trustpilot & Lufthansa  Comprehensive structural reform aims to increase efficiency and profitability - Aviation.Direct"
+      "confidence_score": 6
     },
     {
-      "title": "Dependency on Fuel Costs for Profitability",
-      "description": "With a paperless cockpit introduced by Jens Ritter, there is an ongoing need in the aviation industry to further improve fuel efficiency and manage rising jet fuel prices which impact Lufthansa's bottom line.",
+      "title": "Pilot Strikes and Labor Negotiations",
+      "description": "Lufthansa is facing new tariff negotiations with its pilots' union, which may lead to further strikes.",
+      "evidence": "Lufthansa  Nach Pilotenstreik neue Tarifgespräche mit Gewerkschaft: Lufthansa  Nach Pilotenstreik neue Tarifgespräche mit Gewerkschaft",
       "severity": "High",
-      "confidence_score": 7,
-      "evidence": "Lufthansa  Comprehensive structural reform aims to increase efficiency and profitability - Aviation.Direct & Jens Ritter - Lufthansa Group"
+      "confidence_score": 8
     }
   ],
   "opportunities": [
     {
-      "title": "AI-driven Digital Transformation for Airline Operations",
-      "description": "Lufthansa Systems can leverage AI innovations in airline operations and customer experiences.",
-      "impact": "Medium",
-      "confidence_score": "N/A",
-      "evidence": "Lufthansa Systems IT-Innovationen für die Luftfahrt, Lufthansa Innovation Hub Unveils AI Assistant Aimed at Optimizing Business Travelers' Hotel Booking Experience."
+      "title": "Personalized Travel Experience",
+      "description": "Lufthansa can leverage technology to offer personalized travel experiences, enhancing customer satisfaction and loyalty.",
+      "evidence": "Innovation in Aviation  the Lufthansa Innovation Hub: Tino Klaehne from the Lufthansa Innovation Hub explains how new technology enhances the travel experience",
+      "impact": "High",
+      "confidence_score": "8"
     },
     {
-      "title": "Partnership Expansion with Indian Airlines",
-      "description": "Expanding the strategic partnership between Lufthansa Group and Air India could open new markets in Asia.",
-      "impact": "Medium",
-      "confidence_score": "N/A",
-      "evidence": "Google News - Lufthansa - Latest. Lufthansa Strikes 2026 Current Status and What Travelers Need to Know. Press Release: Lufthansa Group, Air India expand strategic partnership."
+      "title": "Digital Transformation of Airline Operations",
+      "description": "Lufthansa can improve operational efficiency and reduce costs by adopting digital technologies, such as intelligent software and digital transformation.",
+      "evidence": "Lufthansa Systems   IT-Innovationen für die Luftfahrt: Lufthansa Systems ist Ihr zuverlässiger Partner für intelligente Software und digitale Transformation in der Airline-Branc",
+      "impact": "High",
+      "confidence_score": "9"
     },
     {
-      "title": "Sustainability Initiatives for Corporate Responsibility",
-      "description": "Strengthening sustainability efforts can enhance the brand image of Lufthansa Group among environmentally conscious travelers.",
+      "title": "Strategic Partnership with PROS",
+      "description": "Lufthansa can benefit from its strategic partnership with PROS, enhancing revenue management and pricing capabilities.",
+      "evidence": "PROS and Lufthansa Group Extend Strategic Partnership - Business Wire: PROS and Lufthansa Group Extend Strategic Partnership",
       "impact": "Medium",
-      "confidence_score": "N/A",
-      "evidence": "Home - Lufthansa Group Sustainability Fact Sheet 2025 Data and facts on corporate responsibility within the Lufthansa Group."
+      "confidence_score": "6"
     },
     {
-      "title": "Investment in Technological Advancements with IBM",
-      "description": "Collaborating closely with IBM can bring advanced technological solutions to improve operational efficiency for Lufthansa.",
-      "impact": "Medium",
-      "confidence_score": "N/A",
-      "evidence": "Lufthansa Group - IBM. Lufthansa Group IBM"
+      "title": "Increased Profitability through Digital Innovation",
+      "description": "Lufthansa can increase profitability by investing in digital innovation, such as the Lufthansa Innovation Hub.",
+      "evidence": "Lufthansa Group is consistently pursuing its strategy and aims to significantly increase profitability - Lufthansa Group Newsroom: Lufthansa Group is consistently pursuing its strategy and aims to significantly increase profitability",
+      "impact": "High",
+      "confidence_score": "9"
     }
   ],
   "trends": [
     {
-      "title": "Digital Transformation and AI Integration in Aviation Services",
-      "description": "Lufthansa Systems focuses on integrating intelligent IT solutions for flight companies worldwide. The Innovation Hub emphasizes enhancing travel experiences through technology.",
+      "title": "Digital Transformation",
+      "description": "Lufthansa is undergoing a comprehensive digital transformation to increase efficiency and profitability, with a focus on innovation programs, technology initiatives, and investments.",
+      "evidence": "Transformation Deutsche Lufthansa 2024 Digital Innovation",
       "impact": "High",
-      "confidence_score": 9,
-      "evidence": "Lufthansa Systems: IT-Innovationen für die Luftfahrt; Innovation in Aviation  the Lufthansa Innovation Hub"
+      "confidence_score": "8"
     },
     {
-      "title": "Enhanced Passenger Experience and Punctuality Achievements",
-      "description": "Passengers consistently appreciate Lufthansa's punctual operations, comfortable cabin environment, organized boarding system. Focus on improving seat comfort for longer trips is also noted.",
+      "title": "Digitalization in Aviation",
+      "description": "Lufthansa is leveraging digital twin technology to enhance the travel experience and future-proof the company, with a focus on intelligent IT solutions for airlines worldwide.",
+      "evidence": "Digitalization - Lufthansa Technik",
       "impact": "High",
-      "confidence_score": 8,
-      "evidence": "Lufthansa Airlines Travel Experience - Passenger Review Guide; LUFTHANSA - Updated June 2026"
+      "confidence_score": "9"
     },
     {
-      "title": "Sustainability and Corporate Responsibility Initiatives",
-      "description": "The Lufthansa Group is dedicated to sustainability, as evidenced by their comprehensive fact sheets on corporate responsibility.",
+      "title": "Innovation in Aviation",
+      "description": "The Lufthansa Innovation Hub is driving innovation in aviation, with a focus on using technology to offer guests a better travel experience and make the company fit for the future.",
+      "evidence": "Innovation in Aviation  the Lufthansa Innovation Hub",
       "impact": "High",
-      "confidence_score": 8,
-      "evidence": "Home - Lufthansa Group; Lufthansa Group Investor Relations"
+      "confidence_score": "9"
     },
     {
-      "title": "Financial Performance and Revenue Growth Strategy",
-      "description": "Despite a significant gain decline, the Munich-based airline reported record-high revenues. The group is working on increasing operating profit by 20% in future financial periods.",
+      "title": "Holistic Digital Transformation",
+      "description": "The Lufthansa Group's Digital Hangar is driving a holistic digital transformation with agile methods, innovative solutions, and an effective enterprise architecture to optimize the customer experience.",
+      "evidence": "Digitalization in the Lufthansa Group",
       "impact": "High",
-      "confidence_score": 9,
-      "evidence": "Lufthansa mit starkem Gewinneinbruch - ZDFheute; Financial reports publications - Lufthansa Group Investor Relations"
+      "confidence_score": "8"
     }
-  ],
-  "generated_at": "2026-06-22T23:18:40.368497"
+  ]
 }

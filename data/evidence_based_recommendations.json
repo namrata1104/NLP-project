@@ -1,10 +1,29 @@
 {
   "recommendations": [
     {
-      "recommendation": "Leverage AI-driven Digital Transformation to improve operational efficiency and service quality.",
+      "recommendation": "Negotiate a Labor Agreement with Vereinigung Cockpit",
       "supporting_evidence": [
-        "Lufthansa Systems IT-Innovationen für die Luftfahrt",
-        "Lufthansa Group IBM"
+        "AskTraders: Lufthansa Stock Tumbles Despite Record Earnings as Geopolitical and Labor Risks Cloud Outlook - AskTraders",
+        "Flightright: Lufthansa strike compensation  Up to €600  - Flightright",
+        "Lufthansa  Nach Pilotenstreik neue Tarifgespräche mit Gewerkschaft"
+      ],
+      "expected_impact": {
+        "revenue_growth": "Medium",
+        "market_differentiation": "Low",
+        "customer_acquisition": "Low"
+      },
+      "risk_assessment": {
+        "financial_risk": "High",
+        "operational_risk": "High",
+        "strategic_risk": "Medium"
+      }
+    },
+    {
+      "recommendation": "Invest in Digital Transformation and Personalized Travel Experience",
+      "supporting_evidence": [
+        "Innovation in Aviation  the Lufthansa Innovation Hub: Tino Klaehne from the Lufthansa Innovation Hub explains how new technology enhances the travel experience",
+        "Lufthansa Systems   IT-Innovationen für die Luftfahrt: Lufthansa Systems ist Ihr zuverlässiger Partner für intelligente Software und digitale Transformation in der Airline-Branc",
+        "PROS and Lufthansa Group Extend Strategic Partnership - Business Wire: PROS and Lufthansa Group Extend Strategic Partnership"
       ],
       "expected_impact": {
         "revenue_growth": "High",
@@ -14,14 +33,15 @@
       "risk_assessment": {
         "financial_risk": "Low",
         "operational_risk": "Medium",
-        "strategic_risk": "Low"
+        "strategic_risk": "High"
       }
     },
     {
-      "recommendation": "Expand strategic partnership with Indian Airlines to enhance market presence and revenue streams.",
+      "recommendation": "Develop a Competitive Strategy for Long-Haul Routes",
       "supporting_evidence": [
-        "Google News - Lufthansa - Latest",
-        "Lufthansa Group, Air India expand strategic partnership"
+        "Streit um Drehkreuze  Emirates und Co. setzen Lufthansa zu: Streit um Drehkreuze",
+        "Lufthansa Group is consistently pursuing its strategy and aims to significantly increase profitability - Lufthansa Group Newsroom: Lufthansa Group is consistently pursuing its strategy and aims to significantly increase profitability",
+        "Transformation Deutsche Lufthansa 2024 Digital Innovation"
       ],
       "expected_impact": {
         "revenue_growth": "High",
@@ -29,27 +49,10 @@
         "customer_acquisition": "Low"
       },
       "risk_assessment": {
-        "financial_risk": "Medium",
-        "operational_risk": "Medium",
-        "strategic_risk": "Low"
-      }
-    },
-    {
-      "recommendation": "Enhance sustainability initiatives to attract environmentally conscious travelers and manage future regulatory risks.",
-      "supporting_evidence": [
-        "Home - Lufthansa Group Sustainability Fact Sheet 2025 Data and facts on corporate responsibility within the Lufthansa Group"
-      ],
-      "expected_impact": {
-        "revenue_growth": "Low",
-        "market_differentiation": "High",
-        "customer_acquisition": "Medium"
-      },
-      "risk_assessment": {
-        "financial_risk": "Low",
-        "operational_risk": "Medium",
-        "strategic_risk": "Low"
+        "financial_risk": "High",
+        "operational_risk": "High",
+        "strategic_risk": "Medium"
       }
     }
-  ],
-  "generated_at": "2026-06-22T23:21:23.262479"
+  ]
 }
