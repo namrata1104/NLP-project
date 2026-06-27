@@ -68,12 +68,12 @@ flowchart TB
     end
 
     subgraph AgentLayer["AI Agent Layer (agent_orchestrator.ipynb)"]
-        F1[tool_search]
-        F2[tool_llm]
-        F3[tool_validate]
+        F0[Tools:<br/>tool_search · tool_llm · tool_validate]
         F4[MarketAnalysisAgent<br/>Plan → Retrieve → Analyze]
         F5[RecommendationAgent<br/>Plan → Decide → Recommend → Validate]
-        F4 --> F5
+        F4 -->|hands off market analysis| F5
+        F4 -.uses.-> F0
+        F5 -.uses.-> F0
         F5 -.retry on<br/>validation failure.-> F5
     end
 
@@ -86,16 +86,15 @@ flowchart TB
     C1 --> D1
     D1 --> D2 --> D3 --> D4
     C1 --> D5
-    C1 --> F1
+    C1 --> F4
     D2 & D3 & D4 & D5 --> E1
     C1 --> E2
     D3 -.local LLM.-> E2
-    F4 & F5 -.calls.-> F2
-    F5 -.calls.-> F3
     F5 -->|validated output| E1
 ```
 
 **Local reasoning engine:** All LLM-based reasoning (Strategic Intelligence Engine, CEO Agent, Evidence-Based Recommendations, Live Query, AI Agent Layer) runs locally via Ollama using **Llama 3.1 8B**, chosen for its official multilingual support (including German) and more consistent JSON-formatted output under repeated testing. This is fully open-source and satisfies the project requirement that the reasoning engine must not be a paid commercial LLM API.
+
 ---
 
 ## Data Flow Diagram
@@ -114,7 +113,15 @@ flowchart LR
 
     Chroma -->|sentiment model| Sentiment[News / Public Sentiment<br/>+ Trends]
 
-    Insights & CEO & Evidence & Sentiment --> Dashboard[Streamlit Dashboard]
+    Chroma -->|tool_search| AgentRetrieved[Retrieved Documents<br/>per category]
+    AgentRetrieved -->|tool_llm| AgentAnalysis[Structured Risks /<br/>Opportunities / Trends]
+    AgentAnalysis -->|tool_llm| AgentBriefing[CEO Briefing]
+    AgentBriefing -->|tool_llm| AgentRecs[3 Recommendations]
+    AgentRecs -->|tool_validate| AgentCheck{Validation<br/>Passed?}
+    AgentCheck -->|No, retries left| AgentRecs
+    AgentCheck -->|Yes| AgentLog[agent_log.json<br/>+ validated output]
+
+    Insights & CEO & Evidence & Sentiment & AgentLog --> Dashboard[Streamlit Dashboard]
     Chroma -->|live query| LiveQ[Live Strategic Query]
     LiveQ --> Dashboard
 ```
