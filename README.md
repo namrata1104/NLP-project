@@ -40,36 +40,27 @@ This project builds an AI Strategic Intelligence Agent for Lufthansa Group that:
 
 ## System Architecture Diagram
 
-## System Architecture Diagram
-
 ```mermaid
 flowchart TB
     subgraph Collection["Data Collection Layer"]
-        A1[DuckDuckGo Search]
-        A2[Wikipedia EN + DE]
-        A3[Google News RSS]
+        direction LR
+        A1[DuckDuckGo]
+        A2[Wikipedia<br/>EN + DE]
+        A3[Google News<br/>RSS]
         A4[Reddit RSS]
     end
 
-    subgraph Processing["Processing Layer"]
-        B1[Clean Text]
-        B2[Deduplicate]
-        B3[Filter for Relevance]
-        B4[Generate Embeddings]
-    end
+    Processing["Processing Layer<br/>clean · deduplicate · filter · embed"]
 
-    subgraph Storage["Knowledge Repository"]
-        C1[(ChromaDB<br/>Vector Store)]
-    end
+    C1[(ChromaDB<br/>Knowledge Repository)]
 
     subgraph Intelligence["Intelligence Layer (standalone notebooks)"]
         direction TB
-        D1[Semantic Search /<br/>Retrieval]
         D2[Strategic Intelligence Engine<br/>Opportunities · Risks · Trends]
         D3[AI CEO Agent<br/>Reasoning + Prioritization]
         D4[Evidence-Based<br/>Recommendations]
         D5[Sentiment Analysis]
-        D1 --> D2 --> D3 --> D4
+        D2 --> D3 --> D4
     end
 
     subgraph AgentLayer["AI Agent Layer (agent_orchestrator.ipynb)"]
@@ -77,25 +68,20 @@ flowchart TB
         F4[MarketAnalysisAgent<br/>Plan → Retrieve → Analyze]
         F5[RecommendationAgent<br/>Plan → Decide → Recommend → Validate]
         Tools[Tools:<br/>tool_search · tool_llm · tool_validate]
-        F4 -->|hands off market analysis| F5
+        F4 --> F5
         F4 -.uses.-> Tools
         F5 -.uses.-> Tools
-        F5 -->|retry on<br/>validation failure| F5
+        F5 -.retry on failure.-> F5
     end
 
-    subgraph Presentation["Presentation Layer"]
-        E1[Streamlit Executive Dashboard]
-        E2[Live Strategic Query]
-    end
+    Presentation["Presentation Layer<br/>Streamlit Dashboard · Live Strategic Query"]
 
-    A1 & A2 & A3 & A4 --> B1 --> B2 --> B3 --> B4 --> C1
-    C1 --> D1
+    A1 & A2 & A3 & A4 --> Processing --> C1
+    C1 --> D2
     C1 --> D5
     C1 --> F4
-    D2 & D3 & D4 & D5 --> E1
-    F5 -->|validated output| E1
-    C1 --> E2
-    D3 -.local LLM.-> E2
+    Intelligence --> Presentation
+    F5 --> Presentation
 ```
 
 **Local reasoning engine:** All LLM-based reasoning (Strategic Intelligence Engine, CEO Agent, Evidence-Based Recommendations, Live Query, AI Agent Layer) runs locally via Ollama using **Llama 3.1 8B**, chosen for its official multilingual support (including German) and more consistent JSON-formatted output under repeated testing. This is fully open-source and satisfies the project requirement that the reasoning engine must not be a paid commercial LLM API.
@@ -106,60 +92,51 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    Web([Public Web<br/>DuckDuckGo, Wikipedia,<br/>Google News, Reddit])
-
-    subgraph Ingestion["Collection & Storage"]
-        direction TB
-        Raw[Raw Documents<br/>JSON]
-        Clean[Clean Documents]
-        Vectors[384-dim Vectors]
-        Chroma[(ChromaDB)]
-        Raw --> Clean --> Vectors --> Chroma
-    end
+    Web([Public Web<br/>DuckDuckGo · Wikipedia · Google News · Reddit])
+    Raw[Raw Documents<br/>JSON]
+    Prep[Preprocessing<br/>clean · dedupe · filter · embed]
+    Chroma[(ChromaDB<br/>Knowledge Repository)]
 
     Web -->|live search queries| Raw
+    Raw --> Prep
+    Prep -->|384-dim vectors + metadata| Chroma
 
     subgraph Standalone["Standalone Notebook Path"]
         direction TB
-        Retrieved[Retrieved Documents]
-        Insights[Risks / Opportunities /<br/>Trends]
-        CEO[CEO Recommendation<br/>+ Trade-offs]
-        Evidence[Evidence-Based<br/>Recommendations]
-        Retrieved -->|LLM reasoning| Insights
-        Insights -->|LLM reasoning| CEO
-        CEO -->|LLM reformatting| Evidence
+        S1[Risks / Opportunities /<br/>Trends]
+        S2[CEO Recommendation<br/>+ Trade-offs]
+        S3[Evidence-Based<br/>Recommendations]
+        S1 -->|LLM reasoning| S2
+        S2 -->|LLM reformatting| S3
     end
 
-    subgraph AgentPath["AI Agent Layer Path"]
+    subgraph Agent["AI Agent Layer Path"]
         direction TB
-        AgentRetrieved[Retrieved Documents<br/>per category]
-        AgentAnalysis[Structured Risks /<br/>Opportunities / Trends]
-        AgentBriefing[CEO Briefing]
-        AgentRecs[3 Recommendations]
-        AgentCheck{Validation<br/>Passed?}
-        AgentLog[agent_log.json<br/>+ validated output]
-        AgentRetrieved -->|tool_llm| AgentAnalysis
-        AgentAnalysis -->|tool_llm| AgentBriefing
-        AgentBriefing -->|tool_llm| AgentRecs
-        AgentRecs -->|tool_validate| AgentCheck
-        AgentCheck -->|No, retries left| AgentRecs
-        AgentCheck -->|Yes| AgentLog
+        AG1[Structured Risks /<br/>Opportunities / Trends]
+        AG2[CEO Briefing]
+        AG3[3 Recommendations]
+        AGV{Validation<br/>Passed?}
+        AG4[agent_log.json<br/>+ validated output]
+        AG1 -->|tool_llm| AG2
+        AG2 -->|tool_llm| AG3
+        AG3 -->|tool_validate| AGV
+        AGV -->|No, retries left| AG3
+        AGV -->|Yes| AG4
     end
 
-    subgraph SentimentPath["Sentiment Path"]
-        Sentiment[News / Public Sentiment<br/>+ Trends]
-    end
-
-    Chroma -->|semantic search| Retrieved
-    Chroma -->|tool_search| AgentRetrieved
-    Chroma -->|sentiment model| Sentiment
-    Chroma -->|live query| LiveQ[Live Strategic Query]
-
+    Sent[Sentiment Analysis<br/>News / Public + Trends]
+    Live[Live Strategic Query]
     Dashboard[Streamlit Dashboard]
-    Evidence --> Dashboard
-    AgentLog --> Dashboard
-    Sentiment --> Dashboard
-    LiveQ --> Dashboard
+
+    Chroma -->|semantic search → LLM reasoning| S1
+    Chroma -->|tool_search → tool_llm| AG1
+    Chroma -->|sentiment model| Sent
+    Chroma -->|live query| Live
+
+    S3 --> Dashboard
+    AG4 --> Dashboard
+    Sent --> Dashboard
+    Live --> Dashboard
 ```
 
 ---
@@ -178,6 +155,8 @@ flowchart TB
 | Intelligence | Reasoning LLM | Llama 3.1 8B via Ollama (local) | Open-source, official multilingual (EN/DE) support, satisfies "no paid commercial API" requirement, more consistent structured JSON output than smaller models tested |
 | Intelligence | Sentiment model | `cardiffnlp/twitter-xlm-roberta-base-sentiment` | Multilingual, 3-class (positive/negative/neutral), empirically tested as most accurate on business/news text |
 | Agent Layer | Orchestration | Plain Python (classes + functions) | Explicit, dependency-free control flow that keeps every agent decision inspectable and explainable |
+| Agent Layer | Tools | `tool_search`, `tool_llm`, `tool_validate` | Explicit, named capabilities the agents call — satisfies "tool usage beyond the LLM itself" rather than one black-box LLM call |
+| Agent Layer | Validation | Rule-based Python checks (not LLM) | Deterministic pass/fail on evidence count and rating values, independent of model randomness |
 | Presentation | Dashboard | Streamlit | Fast to build, interactive widgets, suitable for live demo |
 | Presentation | Visualization | Matplotlib + Plotly | Static charts for simple comparisons, interactive charts for trend exploration |
 
