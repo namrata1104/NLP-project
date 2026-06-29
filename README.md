@@ -54,15 +54,6 @@ flowchart TB
 
     C1[(ChromaDB<br/>Knowledge Repository)]
 
-    subgraph Intelligence["Intelligence Layer (standalone notebooks)"]
-        direction TB
-        D2[Strategic Intelligence Engine<br/>Opportunities · Risks · Trends]
-        D3[AI CEO Agent<br/>Reasoning + Prioritization]
-        D4[Evidence-Based<br/>Recommendations]
-        D5[Sentiment Analysis]
-        D2 --> D3 --> D4
-    end
-
     subgraph AgentLayer["AI Agent Layer (agent_orchestrator.ipynb)"]
         direction TB
         F4[MarketAnalysisAgent<br/>Plan → Retrieve → Analyze]
@@ -74,17 +65,18 @@ flowchart TB
         F5 -.retry on failure.-> F5
     end
 
+    Sentiment[Sentiment Analysis<br/>sentiment_analysis.ipynb]
+
     Presentation["Presentation Layer<br/>Streamlit Dashboard · Live Strategic Query"]
 
     A1 & A2 & A3 & A4 --> Processing --> C1
-    C1 --> D2
-    C1 --> D5
     C1 --> F4
-    Intelligence --> Presentation
+    C1 --> Sentiment
     F5 --> Presentation
+    Sentiment --> Presentation
 ```
 
-**Local reasoning engine:** All LLM-based reasoning (Strategic Intelligence Engine, CEO Agent, Evidence-Based Recommendations, Live Query, AI Agent Layer) runs locally via Ollama using **Llama 3.1 8B**, chosen for its official multilingual support (including German) and more consistent JSON-formatted output under repeated testing. This is fully open-source and satisfies the project requirement that the reasoning engine must not be a paid commercial LLM API.
+**Local reasoning engine:** All LLM-based reasoning (AI Agent Layer, Live Query) runs locally via Ollama using **Llama 3.1 8B**, chosen for its official multilingual support (including German) and more consistent JSON-formatted output under repeated testing. This is fully open-source and satisfies the project requirement that the reasoning engine must not be a paid commercial LLM API.
 
 ---
 
@@ -100,15 +92,6 @@ flowchart TB
     Web -->|live search queries| Raw
     Raw --> Prep
     Prep -->|384-dim vectors + metadata| Chroma
-
-    subgraph Standalone["Standalone Notebook Path"]
-        direction TB
-        S1[Risks / Opportunities /<br/>Trends]
-        S2[CEO Recommendation<br/>+ Trade-offs]
-        S3[Evidence-Based<br/>Recommendations]
-        S1 -->|LLM reasoning| S2
-        S2 -->|LLM reformatting| S3
-    end
 
     subgraph Agent["AI Agent Layer Path"]
         direction TB
@@ -128,12 +111,10 @@ flowchart TB
     Live[Live Strategic Query]
     Dashboard[Streamlit Dashboard]
 
-    Chroma -->|semantic search → LLM reasoning| S1
     Chroma -->|tool_search → tool_llm| AG1
     Chroma -->|sentiment model| Sent
     Chroma -->|live query| Live
 
-    S3 --> Dashboard
     AG4 --> Dashboard
     Sent --> Dashboard
     Live --> Dashboard
@@ -278,15 +259,12 @@ An LLM checking its own or another LLM's output is still text generation, not ve
 
 ## Project Structure
 
-```
+\`\`\`
 lufthansa_intelligence/
 ├── notebooks/
 │   ├── data_collection.ipynb        # Task 1: Live data collection
 │   ├── processing.ipynb             # Task 2 + 3: Knowledge repository + processing
-│   ├── intelligence_engine.ipynb    # Task 4: Strategic Intelligence Engine
-│   ├── ceo_agent.ipynb              # Task 5: AI CEO Agent
-│   ├── recommendations.ipynb        # Task 6: Evidence-Based Recommendations
-│   ├── sentiment_analysis.ipynb     # Dashboard Section 5: Sentiment Analysis
+│   ├── sentiment_analysis.ipynb     # Sentiment Analysis
 │   └── agent_orchestrator.ipynb     # AI Agent Layer: MarketAnalysisAgent + RecommendationAgent
 ├── data/                            # Saved outputs (documents, intelligence, sentiment, recommendations, agent_log.json)
 ├── storage/
@@ -296,7 +274,7 @@ lufthansa_intelligence/
 ├── requirements.txt
 ├── .env                             # API keys (not committed to GitHub)
 └── README.md
-```
+\`\`\`
 
 ---
 
