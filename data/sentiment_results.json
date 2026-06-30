@@ -1,97 +1,77 @@
 {
   "news_sentiment": {
-    "positive": 53,
-    "negative": 53,
-    "neutral": 216
+    "positive": 58,
+    "negative": 41,
+    "neutral": 213
   },
   "public_sentiment": {
-    "positive": 4,
-    "negative": 24,
-    "neutral": 18
+    "positive": 7,
+    "negative": 16,
+    "neutral": 20
   },
   "sentiment_trends": {
     "2026-06": {
-      "positive": 4,
-      "negative": 45,
-      "neutral": 59
-    },
-    "2026-05": {
-      "positive": 2,
-      "negative": 2,
-      "neutral": 20
+      "positive": 7,
+      "negative": 26,
+      "neutral": 82
     },
     "2026-04": {
       "positive": 0,
       "negative": 2,
-      "neutral": 4
+      "neutral": 9
     },
     "2025-10": {
       "positive": 1,
-      "negative": 1,
-      "neutral": 5
-    },
-    "2025-12": {
-      "positive": 0,
-      "negative": 0,
+      "negative": 2,
       "neutral": 5
     },
     "2025-09": {
       "positive": 3,
-      "negative": 0,
-      "neutral": 4
+      "negative": 1,
+      "neutral": 8
+    },
+    "2026-05": {
+      "positive": 3,
+      "negative": 1,
+      "neutral": 18
     },
     "2026-01": {
       "positive": 1,
       "negative": 0,
-      "neutral": 3
+      "neutral": 2
     },
     "2026-03": {
       "positive": 1,
-      "negative": 3,
-      "neutral": 15
+      "negative": 2,
+      "neutral": 16
     },
     "2025-11": {
       "positive": 0,
       "negative": 0,
       "neutral": 1
     },
+    "2025-12": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 5
+    },
     "2025-08": {
-      "positive": 3,
+      "positive": 2,
       "negative": 0,
       "neutral": 4
     },
     "2025-03": {
       "positive": 3,
       "negative": 0,
-      "neutral": 4
-    },
-    "2024-11": {
-      "positive": 1,
-      "negative": 0,
-      "neutral": 0
-    },
-    "2023-12": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 2
-    },
-    "2021-09": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
+      "neutral": 3
     },
     "2025-07": {
       "positive": 2,
       "negative": 0,
-      "neutral": 5
+      "neutral": 4
     },
-    "2023-02": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 2
-    },
-    "2024-10": {
-      "positive": 4,
+    "2024-03": {
+      "positive": 3,
       "negative": 0,
       "neutral": 1
     },
@@ -100,57 +80,7 @@
       "negative": 0,
       "neutral": 2
     },
-    "2023-06": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 2
-    },
-    "2024-05": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2024-08": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2023-03": {
-      "positive": 3,
-      "negative": 0,
-      "neutral": 2
-    },
-    "2019-06": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2023-04": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 3
-    },
-    "2021-03": {
-      "positive": 0,
-      "negative": 1,
-      "neutral": 4
-    },
-    "2024-09": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2024-07": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 3
-    },
     "2025-05": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2020-05": {
       "positive": 0,
       "negative": 0,
       "neutral": 1
@@ -160,44 +90,19 @@
       "negative": 1,
       "neutral": 3
     },
-    "2020-11": {
-      "positive": 1,
-      "negative": 0,
-      "neutral": 0
-    },
-    "2024-06": {
+    "2023-11": {
       "positive": 0,
       "negative": 0,
-      "neutral": 1
+      "neutral": 2
     },
     "2017-03": {
       "positive": 1,
       "negative": 0,
       "neutral": 1
     },
-    "2015-06": {
+    "2019-11": {
       "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2019-04": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2016-08": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2018-06": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2015-04": {
-      "positive": 0,
-      "negative": 0,
+      "negative": 1,
       "neutral": 1
     },
     "2026-02": {
@@ -205,9 +110,24 @@
       "negative": 1,
       "neutral": 0
     },
+    "2024-10": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 1
+    },
+    "2024-07": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 1
+    },
     "2025-06": {
       "positive": 1,
       "negative": 0,
+      "neutral": 1
+    },
+    "2023-03": {
+      "positive": 2,
+      "negative": 1,
       "neutral": 1
     },
     "2023-07": {
@@ -216,21 +136,11 @@
       "neutral": 1
     },
     "2022-10": {
-      "positive": 1,
+      "positive": 0,
       "negative": 0,
       "neutral": 1
     },
-    "2024-03": {
-      "positive": 1,
-      "negative": 0,
-      "neutral": 0
-    },
-    "2023-08": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 2
-    },
-    "2023-11": {
+    "2024-05": {
       "positive": 0,
       "negative": 0,
       "neutral": 1
@@ -240,40 +150,40 @@
       "negative": 1,
       "neutral": 0
     },
-    "2019-05": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2021-01": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2020-08": {
-      "positive": 0,
+    "2017-04": {
+      "positive": 1,
       "negative": 1,
       "neutral": 0
+    },
+    "2021-03": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 3
     },
     "2017-11": {
       "positive": 1,
       "negative": 0,
       "neutral": 0
     },
-    "2016-09": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2014-03": {
-      "positive": 0,
-      "negative": 0,
-      "neutral": 1
-    },
-    "2017-04": {
+    "2018-10": {
       "positive": 0,
       "negative": 1,
       "neutral": 0
+    },
+    "2020-08": {
+      "positive": 0,
+      "negative": 1,
+      "neutral": 0
+    },
+    "2015-12": {
+      "positive": 1,
+      "negative": 0,
+      "neutral": 0
+    },
+    "2023-08": {
+      "positive": 0,
+      "negative": 0,
+      "neutral": 1
     },
     "2007-10": {
       "positive": 0,

@@ -1,92 +1,92 @@
 {
   "risks": [
     {
-      "title": "Geopolitical Risks",
-      "description": "Lufthansa's stock tumbled despite record earnings due to geopolitical and labor risks.",
-      "evidence": "AskTraders: Lufthansa Stock Tumbles Despite Record Earnings as Geopolitical and Labor Risks Cloud Outlook - AskTraders",
+      "title": "Competition from Low-Cost Carriers",
+      "description": "Lufthansa faces intense competition from low-cost carriers like Ryanair and easyJet, making it difficult to compete on price.",
+      "evidence": "Wie gut ist die Lufthansa im Vergleich zur europäischen Konkurrenz?",
       "severity": "High",
       "confidence_score": 8
     },
     {
-      "title": "Labor Disputes",
-      "description": "Lufthansa is facing the threat of a marathon strike by pilots' union Vereinigung Cockpit.",
-      "evidence": "Flightright: Lufthansa strike compensation  Up to €600  - Flightright",
+      "title": "Pilot Strikes",
+      "description": "Lufthansa pilots have voted to strike in a pensions dispute, which could lead to significant disruptions and losses for the airline.",
+      "evidence": "Germany news  Lufthansa pilots back strike action - dw.com",
       "severity": "High",
       "confidence_score": 9
     },
     {
-      "title": "Competition from Low-Cost Carriers",
-      "description": "Lufthansa is facing harsh competition from low-cost carriers like Emirates, which are setting their sights on Lufthansa's lucrative long-haul routes.",
-      "evidence": "Streit um Drehkreuze  Emirates und Co. setzen Lufthansa zu: Streit um Drehkreuze",
+      "title": "Competition from New Airlines",
+      "description": "Lufthansa faces competition from new airlines like Air Belgium, which could further erode its market share.",
+      "evidence": "Lufthansa bekommt Konkurrenz durch Air Belgium - DER SPIEGEL",
       "severity": "Medium",
       "confidence_score": 6
     },
     {
-      "title": "Pilot Strikes and Labor Negotiations",
-      "description": "Lufthansa is facing new tariff negotiations with its pilots' union, which may lead to further strikes.",
-      "evidence": "Lufthansa  Nach Pilotenstreik neue Tarifgespräche mit Gewerkschaft: Lufthansa  Nach Pilotenstreik neue Tarifgespräche mit Gewerkschaft",
-      "severity": "High",
-      "confidence_score": 8
+      "title": "Economic Uncertainty and Competition from Premium Airlines",
+      "description": "Lufthansa's premium airline, Swiss, competes with other high-end airlines, making it challenging for Lufthansa to maintain its market share.",
+      "evidence": "Lufthansa wagt nach Gewinnrückgang und Corona keine... - airliners.de",
+      "severity": "Medium",
+      "confidence_score": 5
     }
   ],
   "opportunities": [
     {
-      "title": "Personalized Travel Experience",
-      "description": "Lufthansa can leverage technology to offer personalized travel experiences, enhancing customer satisfaction and loyalty.",
-      "evidence": "Innovation in Aviation  the Lufthansa Innovation Hub: Tino Klaehne from the Lufthansa Innovation Hub explains how new technology enhances the travel experience",
+      "title": "AI-Powered Flight Profile Transmission",
+      "description": "Lufthansa Group will equip new Airbus A320neo and A321neo aircraft with automated flight profile transmission technology, enhancing operational efficiency and sustainability.",
+      "evidence": "Innovation driver  Lufthansa Group invests in new technology to....",
       "impact": "High",
       "confidence_score": "8"
     },
     {
-      "title": "Digital Transformation of Airline Operations",
-      "description": "Lufthansa can improve operational efficiency and reduce costs by adopting digital technologies, such as intelligent software and digital transformation.",
-      "evidence": "Lufthansa Systems   IT-Innovationen für die Luftfahrt: Lufthansa Systems ist Ihr zuverlässiger Partner für intelligente Software und digitale Transformation in der Airline-Branc",
-      "impact": "High",
-      "confidence_score": "9"
+      "title": "Trend Forecasting and Strategic Innovation",
+      "description": "Lufthansa's Innovation Hub is leveraging trend forecasting to drive strategic innovation, enabling the airline to stay ahead of industry trends and capitalize on emerging opportunities.",
+      "evidence": "Trend Forecasting Case Study - Lufthansa Innovation Hub   Feedly",
+      "impact": "Medium",
+      "confidence_score": "7"
     },
     {
-      "title": "Strategic Partnership with PROS",
-      "description": "Lufthansa can benefit from its strategic partnership with PROS, enhancing revenue management and pricing capabilities.",
-      "evidence": "PROS and Lufthansa Group Extend Strategic Partnership - Business Wire: PROS and Lufthansa Group Extend Strategic Partnership",
+      "title": "AI-Based MRO Innovation",
+      "description": "Lufthansa Technik Philippines is encouraging AI-based innovation in the maintenance, repair, and overhaul (MRO) sector, with a focus on exploring cutting-edge AI technologies.",
+      "evidence": "Lufthansa Technik Philippines encourages AI-based innovation",
       "impact": "Medium",
       "confidence_score": "6"
     },
     {
-      "title": "Increased Profitability through Digital Innovation",
-      "description": "Lufthansa can increase profitability by investing in digital innovation, such as the Lufthansa Innovation Hub.",
-      "evidence": "Lufthansa Group is consistently pursuing its strategy and aims to significantly increase profitability - Lufthansa Group Newsroom: Lufthansa Group is consistently pursuing its strategy and aims to significantly increase profitability",
+      "title": "Digital Transformation through Strategic Partnerships",
+      "description": "Lufthansa Group is accelerating its digital transformation strategy through strategic partnerships, such as the extended partnership with PROS, to drive business growth and improve operational efficiency.",
+      "evidence": "PROS and Lufthansa Group Extend Strategic Partnership - Business Wire",
       "impact": "High",
       "confidence_score": "9"
     }
   ],
   "trends": [
     {
-      "title": "Digital Transformation",
-      "description": "Lufthansa is undergoing a comprehensive digital transformation to increase efficiency and profitability, with a focus on innovation programs, technology initiatives, and investments.",
-      "evidence": "Transformation Deutsche Lufthansa 2024 Digital Innovation",
+      "title": "Digitalization of Technical Fleet Management",
+      "description": "Lufthansa is investing in digital systems to streamline and optimize technical fleet management processes.",
+      "evidence": "Newsroom Lufthansa Group - PressPage: Newsroom Lufthansa Group - PressPage",
       "impact": "High",
-      "confidence_score": "8"
+      "confidence_score": 9
     },
     {
-      "title": "Digitalization in Aviation",
-      "description": "Lufthansa is leveraging digital twin technology to enhance the travel experience and future-proof the company, with a focus on intelligent IT solutions for airlines worldwide.",
-      "evidence": "Digitalization - Lufthansa Technik",
+      "title": "Fleet Modernization",
+      "description": "Lufthansa is undergoing comprehensive fleet modernization as part of its transformation strategy.",
+      "evidence": "Lufthansa - Strategic Analysis and Outlook Report 2026: Lufthansa - Strategic Analysis and Outlook Report 2026",
       "impact": "High",
-      "confidence_score": "9"
+      "confidence_score": 8
     },
     {
-      "title": "Innovation in Aviation",
-      "description": "The Lufthansa Innovation Hub is driving innovation in aviation, with a focus on using technology to offer guests a better travel experience and make the company fit for the future.",
-      "evidence": "Innovation in Aviation  the Lufthansa Innovation Hub",
+      "title": "Sustainability and Environmental Responsibility",
+      "description": "Lufthansa is implementing various measures to reduce emissions, including the use of sustainable aviation fuel (SAF) and fleet modernization.",
+      "evidence": "Klima und Umwelt - Lufthansa Group: Klima und Umwelt - Lufthansa Group",
       "impact": "High",
-      "confidence_score": "9"
+      "confidence_score": 9
     },
     {
-      "title": "Holistic Digital Transformation",
-      "description": "The Lufthansa Group's Digital Hangar is driving a holistic digital transformation with agile methods, innovative solutions, and an effective enterprise architecture to optimize the customer experience.",
-      "evidence": "Digitalization in the Lufthansa Group",
+      "title": "Digital Transformation and Innovation",
+      "description": "Lufthansa is embracing digital transformation through initiatives such as the development of a cloud platform for optimizing maintenance, AI-powered innovations, and customer-facing chatbots.",
+      "evidence": "Lufthansa CIO Dr Roland Schütz describes the airline s digital...   CIO: Lufthansa CIO Dr Roland Schütz describes the airline s digital...   CIO",
       "impact": "High",
-      "confidence_score": "8"
+      "confidence_score": 9
     }
   ]
 }
